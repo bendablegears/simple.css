@@ -199,6 +199,7 @@ button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled] {
+	border: 0.2rem solid var(--accent);
 	cursor: default;
 	opacity: .5;
 	cursor: not-allowed;

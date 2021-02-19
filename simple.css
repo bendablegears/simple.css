@@ -25,6 +25,7 @@
   --code: #BE2349;
   --preformatted: #444;
   --marked: #FFE561;
+  --disabled: #EFEFEF;
 }
 
 /* Dark theme */
@@ -40,6 +41,7 @@
     --code: #F06292;
     --preformatted: #CCC;
 	--marked: #FFDD33;
+    --disabled: #111;
   }
 
   img, video {
@@ -205,6 +207,16 @@ input[type="button"][disabled] {
 	cursor: not-allowed;
 }
 
+input:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  background: var(--disabled);
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
     cursor: help;
@@ -303,6 +315,9 @@ input {
 	box-shadow: none;
 	box-sizing: border-box;
   width: 60%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 /* Make the textarea wider than other inputs */
@@ -383,6 +398,7 @@ cite {
 /* Use mono font for code like elements */
 code,
 pre,
+pre span,
 kbd,
 samp {
     font-size: 1.075rem;
